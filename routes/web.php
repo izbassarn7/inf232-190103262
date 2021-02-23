@@ -24,3 +24,7 @@ Route::get('/rout-ex', function () {
 Route::get('/post/{id}/{age?}', function ($id,$age=15) {
     return "Nurlan Izbassar's id: ".$id." and ".$age." years old";
 });
+
+Route::get('/details/{sdate}', 'App\Http\Controllers\StudentController@display');
+
+Route::get('/details2/{age}', 'App\Http\Controllers\StudentController@display2');
